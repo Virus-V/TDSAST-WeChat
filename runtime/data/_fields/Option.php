@@ -1,0 +1,2 @@
+<?php
+return array ( 0 => 'option_id', 1 => 'o_key', 2 => 'o_value', 3 => 'o_is_array', '_autoinc' => true, '_pk' => 'option_id', '_type' => array ( 'option_id' => 'int(10) unsigned', 'o_key' => 'varchar(32)', 'o_value' => 'text', 'o_is_array' => 'tinyint(3) unsigned', ), ); ?>
