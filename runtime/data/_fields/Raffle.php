@@ -1,2 +1,0 @@
-<?php
-return array ( 0 => 'id', 1 => 'openid', 2 => 'nickname', 3 => 'is_draw', 4 => 'is_enable', 5 => 'prize', 6 => 'date', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'int(11)', 'openid' => 'varchar(64)', 'nickname' => 'varchar(64)', 'is_draw' => 'tinyint(4)', 'is_enable' => 'tinyint(4)', 'prize' => 'int(11)', 'date' => 'int(11)', ), ); ?>
