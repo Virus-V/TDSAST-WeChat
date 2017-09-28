@@ -1,2 +1,0 @@
-<?php
-return array ( 0 => 'm_id', 1 => 'm_title', 2 => 'm_type', 3 => 'm_index', 4 => 'm_parent', 5 => 'm_addition', 6 => 'm_enable', '_autoinc' => true, '_pk' => 'm_id', '_type' => array ( 'm_id' => 'int(11)', 'm_title' => 'varchar(8)', 'm_type' => 'varchar(32)', 'm_index' => 'int(11)', 'm_parent' => 'int(11)', 'm_addition' => 'text', 'm_enable' => 'tinyint(4)', ), ); ?>
