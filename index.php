@@ -3,7 +3,7 @@ namespace Vpf\App;
 use Vpf;
 
 define('APP_NAME','TDSAST_WChat');
-define('APP_VERSION','1.1');
+define('APP_VERSION','1.0');
 define('APP_ENTRY',__FILE__);
 define('APP_PATH',dirname(__FILE__));
 define('VPF_PATH',dirname(APP_PATH).'/vpf');
