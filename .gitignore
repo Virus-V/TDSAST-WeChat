@@ -1,0 +1,6 @@
+# 忽略临时文件夹
+runtime/*.php
+runtime/cache/*.php
+runtime/data/*.php
+runtime/log/*.php
+runtime/temp/*.php
