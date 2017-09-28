@@ -92,38 +92,22 @@ final class IndexCtrl extends \Vpf\Ctrl
             case \Wechat::EVENT_SUBSCRIBE:
                 $openId = $this->weObj->getRevFrom();
                 $userInfo = $this->weObj->getUserInfo($openId);
-                
-                $reply = $userInfo['nickname'];
-                $reply .= '，欢迎关注包钢牌答题器！';
-                //$reply .= ''."\n";
-				
-                $this->weObj->text($reply)->reply();
-				/*
-				$data = array(
-					'touser'=>$openId,
-					
-					//'msgtype'=>'text',
-					//'text'=>array(
-					//    'content'=>"恭喜获得{$prize}代金券！\n凭微信号可享受降价优惠！",
-					//),
-					'msgtype'=>'news',
-					'news' => array(
-						'articles'=>array(
-							array(
-								'title' => "欢迎",
-								'description' => '凭此充值卡可享受选课优惠！',
-								'picurl' => 'https:'.__APP__.'/public/czk_cover.jpg',
-								'url' => 'http://www.baidu.com',
-							),
-						),
-					),
-				);
-
-				$this->weObj->sendCustomMessage($data);
-				*/
+                /* 发送欢迎信息 */
+                /**
+                 * 这个是关注就推送的新闻页，可以放多个新闻
+                 */
+				$reply = array(
+                  	array(
+                  		'Title'=> $userInfo['nickname'] . '，欢迎关注通达科协公众号！',
+                  		'Description'=>'终于等到你，还好没放弃！',
+                  		'PicUrl'=> 'http:'.__APP__.'/public/waiting_for_you.jpeg',
+                  		'Url'=>'http://www.tdsast.cn'
+                  	),
+                );
+                $this->weObj->news($reply)->reply();
             break;
             
-            default:
+            default: break;
         }
         
     }
