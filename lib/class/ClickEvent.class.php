@@ -19,17 +19,10 @@ class ClickEvent{
         return $this->weObj->text(Vpf\L('UNKNOW_ACTION'))->reply();
     }
     
-    /* 英语提高 */
-    public function to_answer(){
-        $news = array(
-            array(
-                'Title'=>'答你MMP',
-                'Description'=> 'http:'.__APP__ . Vpf\U('Index/print_arames'),
-                'PicUrl'=>'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png',
-                'Url'=> 'http:'.__HOST__ . Vpf\U('Index/print_arames'),
-            ),
-	    );
-        return $this->weObj->news($news)->reply();
+    /* 打开科协大门 */
+    public function open_the_ext_door(){
+        $reply = "新世界的大门已打开～";
+        return $this->weObj->text($reply)->reply();
     }
     
     /* 联系我们 */
