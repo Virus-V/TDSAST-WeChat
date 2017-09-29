@@ -58,7 +58,8 @@ final class IndexCtrl extends \Vpf\Ctrl
     
     /* 处理发来的图片 */
     private function parseImage(){
-        
+        //todo
+        // aa
     }
     
     /* 处理发来的位置信息 */
