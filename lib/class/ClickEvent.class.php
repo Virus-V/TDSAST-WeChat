@@ -21,7 +21,17 @@ class ClickEvent{
     
     /* 打开科协大门 */
     public function open_the_ext_door(){
-        $reply = "新世界的大门已打开～";
+        Vpf\import('phpMQTT');
+        $mqtt_broker_cfg = Vpf\C('MQTT_CFG');
+        $mqtt = new \Bluerhinos\phpMQTT($mqtt_broker_cfg['mqtt_broker_ip'], $mqtt_broker_cfg['mqtt_broker_port'], $mqtt_broker_cfg['client_id']);
+
+        if ($mqtt->connect(true, NULL, $mqtt_broker_cfg['username'], $mqtt_broker_cfg['password'])) {
+            $mqtt->publish("td_cloud/tdsast/ext_door", "Lock ON", 0);
+            $mqtt->close();
+            $reply = "新世界的大门已打开～";
+        } else {
+            $reply = "请求超时。。";
+        }
         return $this->weObj->text($reply)->reply();
     }
     

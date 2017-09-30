@@ -34,5 +34,13 @@ return array(
 	'DB_PREFIX' => 'jh_', 
 	/* 数据库表后缀 */
 	'DB_SUFFIX' => '',
+	/* MQTT服务器配置信息 */
+	'MQTT_CFG' => array(
+		'mqtt_broker_ip' => '139.129.19.29',
+		'mqtt_broker_port' => 1883,
+		'username' => '',
+		'password' =>'',
+		'client_id' => 'TDSAST-IOT-Wechat',
+	),
 );
 ?>
