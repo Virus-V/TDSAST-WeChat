@@ -45,7 +45,7 @@ final class IndexCtrl extends \Vpf\Ctrl
 		}else{
 			echo 'failed';
 		}
-    }
+	}
 	
 	public function print_arames(){
 		Vpf\P($_GET);
