@@ -2,7 +2,7 @@
 return array(
     'UNKNOW_MSGTYPE' => '未知消息类型',
     'UNKNOW_ACTION' => '未知动作',
-    'HELLO' => '欢迎使用通达课堂在线答题系统。',
+    'HELLO' => '你好～',
     '' => '',
     '' => '',
     '' => '',
