@@ -38,8 +38,8 @@ return array(
 	'MQTT_CFG' => array(
 		'mqtt_broker_ip' => '139.129.19.29',
 		'mqtt_broker_port' => 1883,
-		'username' => '',
-		'password' =>'',
+		'username' => 'extdoor',
+		'password' =>'extdoor12345',
 		'client_id' => 'TDSAST-IOT-Wechat',
 	),
 );
