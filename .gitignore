@@ -4,3 +4,4 @@ runtime/cache/*.php
 runtime/data/*.php
 runtime/log/*.php
 runtime/temp/*.php
+wechat
