@@ -39,7 +39,7 @@ function init(showStats) {
     tesselation.setup(svg);
     gradients.setup();
   
-    var lastTransitionAt, transitionDelay = 5500, transitionDuration = 3000;
+    var lastTransitionAt, transitionDelay = 15500, transitionDuration = 3000;
   
     function playNextTransition() {
       tesselation.next(transitionDuration);
