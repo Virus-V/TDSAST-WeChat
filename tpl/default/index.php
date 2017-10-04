@@ -48,7 +48,7 @@ svg polygon {
 <{include navigation.php}>
 
 <div id="main-info" class="jumbotron">
-	<svg id="main-info-bg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice">
+	<svg id="main-info-bg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
 		<defs>
 			<linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0" color-interpolation="sRGB">
 				<stop id="stop1a" offset="0%" stop-color="#12a3b4"></stop>
@@ -59,8 +59,8 @@ svg polygon {
 				<stop id="stop2b" offset="100%" stop-color="#00a78f"></stop>
 			</linearGradient>
 		</defs>
-		<rect id="rect1" x="0" y="0" width="1600" height="400" stroke="none" fill="url(#grad1)"></rect>
-		<rect id="rect2" x="0" y="0" width="1600" height="400" stroke="none" fill="url(#grad2)"></rect>
+		<rect id="rect1" x="0" y="0" width="800" height="400" stroke="none" fill="url(#grad1)"></rect>
+		<rect id="rect2" x="0" y="0" width="800" height="400" stroke="none" fill="url(#grad2)"></rect>
 	</svg>
   <div class="container animatedParent" data-sequence="500">
     <h1 class="animated init" data-id="1" data-effect-in="fadeInDown">{Hello, World!}</h1>
