@@ -17,6 +17,25 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
 #validateCode {
 	padding-left: 120px;
 }
+svg {
+  width: 100%;
+  height: 100%;
+}
+svg g {
+  mix-blend-mode: lighten;
+}
+svg polygon {
+  stroke: none;
+  fill: white;
+}
+#main-info{
+	position:relative;
+}
+#main-info-bg{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
 </style>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,19 +47,35 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
 <body style="padding-top: 50px">
 <{include navigation.php}>
 
-<div class="jumbotron">
+<div id="main-info" class="jumbotron">
+	<svg id="main-info-bg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice">
+		<defs>
+			<linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0" color-interpolation="sRGB">
+				<stop id="stop1a" offset="0%" stop-color="#12a3b4"></stop>
+				<stop id="stop1b" offset="100%" stop-color="#ff509e"></stop>
+			</linearGradient>
+			<linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0" color-interpolation="sRGB">
+				<stop id="stop2a" offset="0%" stop-color="#e3bc13"></stop>
+				<stop id="stop2b" offset="100%" stop-color="#00a78f"></stop>
+			</linearGradient>
+		</defs>
+		<rect id="rect1" x="0" y="0" width="1600" height="400" stroke="none" fill="url(#grad1)"></rect>
+		<rect id="rect2" x="0" y="0" width="1600" height="400" stroke="none" fill="url(#grad2)"></rect>
+	</svg>
   <div class="container animatedParent" data-sequence="500">
     <h1 class="animated init" data-id="1" data-effect-in="fadeInDown">{Hello, World!}</h1>
     <p class="animated init" data-id="2" data-effect-in="fadeInRight">我们是通达云开发团队，我们还都很年轻。</p>
-    <p><span id="join_us" class="btn btn-success btn-lg" role="button">要加入我们么？</span></p>
+    <!-- <p><span id="join_us" class="btn btn-success btn-lg" role="button">要加入我们么？</span></p> -->
   </div>
 </div>
 <!-- 页面内容开始 -->
 <div class="container">
+
 </div>
 <!-- 页面内容结束 -->
 <{include footer.php}>
 
+<{import type="js" file="TweenMax#min,Stats#min,main-info-bg" basepath="(THEME_PATH)/js" baseurl="(__THEME__)/js"}> 
 <script>
 $(function() {
 	$("#join_us").on("click", function( e ) {
@@ -62,6 +97,7 @@ $(function() {
           });
 	});
 });
+
 </script>
 </body>
 </html>
