@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <hr>
     <div class="row">
     	<div class="col-sm-10 col-sm-offset-1 text-center" >

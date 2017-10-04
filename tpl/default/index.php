@@ -5,6 +5,9 @@
 <style>
 body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }
+html, body {
+	height:100%;
+}
 #captcha {
 	border-radius: 2px;
 	cursor: pointer;
@@ -36,6 +39,8 @@ svg polygon {
 	top:0px;
 	left:0px;
 }
+
+	
 </style>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -68,8 +73,12 @@ svg polygon {
     <!-- <p><span id="join_us" class="btn btn-success btn-lg" role="button">要加入我们么？</span></p> -->
   </div>
 </div>
+
 <!-- 页面内容开始 -->
-<div class="container">
+
+<div class="clearfix"></div>
+<div id="main-content" class="container">
+
 
 </div>
 <!-- 页面内容结束 -->
