@@ -36,7 +36,7 @@ class ClickEvent{
                       'Description' => '只有科协的现任部员才能获得开门权限噢',
                       'PicUrl' => 'http:' . __APP__ . '/public/renzheng.jpeg',
                       // 认证URL
-                      'Url' => 'http:' . __APP__ . Vpf\U('page@index/do_auth', 'oi='.$openId)
+                      'Url' => 'http:' . __HOST__ . Vpf\U('page@index/do_auth', 'oi='.$openId)
                   ),
             );
             return $this->weObj->news($reply)->reply();
