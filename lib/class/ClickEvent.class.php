@@ -51,8 +51,12 @@ class ClickEvent{
                     $mqtt->publish("td_cloud/tdsast/ext_door", "Lock ON", 0);
                     $mqtt->close();
                     $reply = "新世界的大门已打开～";
+                    // 插入日志
+                    Vpf\M('door_log')->addLog($permit_info['stu_id']);
                 } else {
                     $reply = "请求超时。。";
+                    // 插入日志，开门失败
+                    Vpf\M('door_log')->addLog($permit_info['stu_id'], 0);
                 }
             }else{
                 $reply = "没有权限，请联系你部长代开或者联系管理员。";
