@@ -46,17 +46,26 @@ class ClickEvent{
                 Vpf\import('phpMQTT');
                 $mqtt_broker_cfg = Vpf\C('MQTT_CFG');
                 $mqtt = new \Bluerhinos\phpMQTT($mqtt_broker_cfg['mqtt_broker_ip'], $mqtt_broker_cfg['mqtt_broker_port'], $mqtt_broker_cfg['client_id']);
-    
+                // 日志记录模型
+                $m_door_log = Vpf\M('door_log');
                 if ($mqtt->connect(true, NULL, $mqtt_broker_cfg['username'], $mqtt_broker_cfg['password'])) {
                     $mqtt->publish("td_cloud/tdsast/ext_door", "Lock ON", 0);
                     $mqtt->close();
-                    $reply = "新世界的大门已打开～";
+                    // 查询前三次开门者
+                    $last_opener = $m_door_log->order('`time` desc')
+                        ->join('`__STUDENT_INFO__` on `__DOOR_LOG__`.`stu_id` = `__STUDENT_INFO__`.`stu_id`')
+                        ->limit(3)->select();
                     // 插入日志
-                    Vpf\M('door_log')->addLog($permit_info['stu_id']);
+                    $m_door_log->addLog($permit_info['stu_id']);
+                    // 构造应答
+                    $reply = "新世界的大门已打开～";
+                    foreach($last_opener as $opener){
+                        $reply .= "\n". $opener['realname'] .'（'.$opener['stu_id'].'）于'. date('Y-m-d H:i:s', $opener['time']). '开门'.($opener['result'] ? '成功' : '失败');
+                    }
                 } else {
                     $reply = "请求超时。。";
                     // 插入日志，开门失败
-                    Vpf\M('door_log')->addLog($permit_info['stu_id'], 0);
+                    $m_door_log->addLog($permit_info['stu_id'], 0);
                 }
             }else{
                 $reply = "没有权限，请联系你部长代开或者联系管理员。";
