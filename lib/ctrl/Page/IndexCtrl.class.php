@@ -32,7 +32,8 @@ final class IndexCtrl extends \Vpf\Ctrl
             session_write_close();
         }
         if($_SESSION['auth_result'][0] != true){
-            echo '认证失败';
+            $this->assign('info', "<h1>认证失败！</h1><p>非常抱歉，你的信息认证失败了，请确保你现在是通达的学生，或者手动访问正方教务系统查看是否可以正常登录，是否填写教师评价等。</p>");
+            $this->display('wechat_page/tips');
         }
         // 插入到acl table
         $m_acl = Vpf\M('acl_table');
@@ -47,7 +48,9 @@ final class IndexCtrl extends \Vpf\Ctrl
         /* 插入个人信息 */
         $m_student_info->create($_SESSION['auth_response']['xsgrxx']);
         $m_student_info->insert(true);
-        echo '认证成功，请再次开门';
+
+        $this->assign('info', "<h1>认证成功！</h1><p>{$_SESSION['auth_response']['xsgrxx']['realname']}同学，你已认证成功，认证成功后不需要再次认证。</p><p>请关掉该页面后再次开门。</p>");
+        $this->display('wechat_page/tips');
     }
 }
 ?>

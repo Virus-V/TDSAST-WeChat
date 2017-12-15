@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<{include header.php}>
+<{include pc_page/header.php}>
 <style>
 body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }
@@ -50,7 +50,7 @@ svg polygon {
 		<![endif]-->
 </head>
 <body style="padding-top: 50px">
-<{include navigation.php}>
+<{include pc_page/navigation.php}>
 
 <div id="main-info" class="jumbotron">
 	<svg id="main-info-bg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
@@ -82,9 +82,9 @@ svg polygon {
 
 </div>
 <!-- 页面内容结束 -->
-<{include footer.php}>
+<{include pc_page/footer.php}>
 
-<{import type="js" file="TweenMax#min,Stats#min,main-info-bg" basepath="(THEME_PATH)/js" baseurl="(__THEME__)/js"}> 
+<{import type="js" file="TweenMax#min,Stats#min,main-info-bg" basepath="(THEME_PATH)/pc_page/js" baseurl="(__THEME__)/pc_page/js"}> 
 <script>
 $(function() {
 	$("#join_us").on("click", function( e ) {

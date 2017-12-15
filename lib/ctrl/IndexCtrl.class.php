@@ -7,7 +7,7 @@ final class IndexCtrl extends \Vpf\Ctrl
 	public function index(){
 		//$wechat_obj = new \vpfwchat();
 		//Vpf\P($wechat_obj->getMenu());
-		$this->display('index');
+		$this->display('pc_page/index');
 		
 	}
 	

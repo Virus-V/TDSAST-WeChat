@@ -7,4 +7,4 @@
     </div>
 </div>
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
-<{import type="js" file="jquery-1#11#2#min,bootstrap,css3-animate-it,flavr#min" basepath="(THEME_PATH)/js" baseurl="(__THEME__)/js"}> 
+<{import type="js" file="jquery-1#11#2#min,bootstrap,css3-animate-it,flavr#min" basepath="(THEME_PATH)/pc_page/js" baseurl="(__THEME__)/pc_page/js"}> 
