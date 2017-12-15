@@ -65,7 +65,7 @@
 <script src='<{*__THEME__}>/zf_login/js/background.js' type="text/javascript"></script>
 <script src='<{*__THEME__}>/zf_login/js/jquery.js' type="text/javascript"></script>
 <script src='<{*__THEME__}>/zf_login/js/layer/layer.js' type="text/javascript"></script>
-<script src='<{*__THEME__}>/zf_login/js/form/dist/jquery.form.min.js' type="text/javascript"></script>
+<script src='<{*__THEME__}>/zf_login/js/jquery.form.min.js' type="text/javascript"></script>
 
 <script>
 	$('.imgcode').hover(function(){
