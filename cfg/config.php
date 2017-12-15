@@ -27,11 +27,11 @@ return array(
 	/* 服务器地址 */
 	'DB_HOST' => 'localhost', 
 	/* 数据库名 */
-	'DB_NAME' => 'jhedu', 
+	'DB_NAME' => 'sast_extdoor', 
 	/* 数据库默认编码 */
 	'DB_CHARSET' => 'utf8', 
 	/* 数据库表前缀 */
-	'DB_PREFIX' => 'jh_', 
+	'DB_PREFIX' => 'sast_', 
 	/* 数据库表后缀 */
 	'DB_SUFFIX' => '',
 	/* MQTT服务器配置信息 */

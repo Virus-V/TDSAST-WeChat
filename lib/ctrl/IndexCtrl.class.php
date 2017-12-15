@@ -5,9 +5,10 @@ use Vpf;
 final class IndexCtrl extends \Vpf\Ctrl
 {
 	public function index(){
-		// $wechat_obj = new \vpfwchat();
-		// Vpf\P($wechat_obj->getMenu());
+		//$wechat_obj = new \vpfwchat();
+		//Vpf\P($wechat_obj->getMenu());
 		$this->display('index');
+		
 	}
 	
     //生成微信端按钮
