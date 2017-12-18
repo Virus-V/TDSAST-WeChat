@@ -31,9 +31,10 @@ final class IndexCtrl extends \Vpf\Ctrl
             session_start();
             session_write_close();
         }
-        if($_SESSION['auth_result'][0] != true){
+        if(empty($_SESSION['auth_result']) || $_SESSION['auth_result'][0] != true){
             $this->assign('info', "<h1>认证失败！</h1><p>非常抱歉，你的信息认证失败了，请确保你现在是通达的学生，或者手动访问正方教务系统查看是否可以正常登录，是否填写教师评价等。</p>");
             $this->display('wechat_page/tips');
+            exit;
         }
         // 插入到acl table
         $m_acl = Vpf\M('acl_table');
